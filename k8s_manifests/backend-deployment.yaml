@@ -39,17 +39,17 @@ spec:
                 name: mongo-sec
                 key: password
         ports:
-        - containerPort: 8080
+        - containerPort: 8082
         livenessProbe:
           httpGet:
             path: /ok
-            port: 8080
+            port: 8082
           initialDelaySeconds: 2
           periodSeconds: 5
         readinessProbe:
           httpGet:
              path: /ok
-             port: 8080
+             port: 8082
           initialDelaySeconds: 5
           periodSeconds: 5
           successThreshold: 1
